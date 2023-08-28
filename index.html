@@ -6,6 +6,7 @@
     <link href="./style.css" rel="stylesheet">
     <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script>
+        // For dark mode
         // On page load or when changing themes, best to add inline in `head` to avoid FOUC
         if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
             document.documentElement.classList.add('dark');
@@ -19,11 +20,12 @@
 <body>
    
     <header>
+      <!-- Navbar -->
         <nav class=" fixed top-0 inset-x-0 z-50 bg-white border-gray-200 px- bg-white border-gray-200 px-2 sm:px-4 py-4 rounded shadow dark:bg-gray-800">
             <div class="container mx-auto flex flex-wrap items-center justify-between">
             <a href="#" class="flex">
-              <svg class="h-10 mr-3" viewBox="0 0 52 72" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.87695 53H28.7791C41.5357 53 51.877 42.7025 51.877 30H24.9748C12.2182 30 1.87695 40.2975 1.87695 53Z" fill="#76A9FA"></path><path d="M0.000409561 32.1646L0.000409561 66.4111C12.8618 66.4111 23.2881 55.9849 23.2881 43.1235L23.2881 8.87689C10.9966 8.98066 1.39567 19.5573 0.000409561 32.1646Z" fill="#A4CAFE"></path><path d="M50.877 5H23.9748C11.2182 5 0.876953 15.2975 0.876953 28H27.7791C40.5357 28 50.877 17.7025 50.877 5Z" fill="#1C64F2"></path></svg>
-                <span class="self-center text-lg font-semibold whitespace-nowrap dark:text-white">Quick Mails</span>
+                 
+                <span class="self-center text-xl font-serif text-blue-900 font-bold whitespace-nowrap dark:text-white">Quick Mails</span>
             </a>
             <div class="flex md:order-2">
                 
@@ -46,25 +48,28 @@
                   <a href="#" class="text-gray-700 font-bold hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-blue-700 md:p-0 md:dark:hover:white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Home</a>
                 </li>
                 <li>
-                  <a href="#" class="text-gray-700 font-bold hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-blue-700 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">About</a>
+                    <a href="#upload_file" class="text-gray-700 font-bold hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-blue-700 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Upload File</a>
+                  </li>
+                <li>
+                  <a href="#csvFile" class="text-gray-700 font-bold hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-blue-700 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Valid emails</a>
                 </li>
                 <li>
-                  <a href="#" class="text-gray-700 font-bold hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-blue-700 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Services</a>
+                  <a href="#mail" class="text-gray-700 font-bold hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-blue-700 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Write Mail</a>
                 </li>
-                <li>
-                  <a href="#" class="text-gray-700 font-bold hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-blue-700 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Contact</a>
-                </li>
-              </ul>
+                </ul>
             </div>
             </div>
           </nav>
+          <!-- End of navbar  -->
     </header>
-    <section class="bg-white dark:bg-gray-900 bg-scroll" style="background-image: url(./src/Navy\ Modern\ Business\ Conference\ Poster\ \(2\).png) ">
+    
+    <!-- Section  to upload CSV file -->
+    <section class="bg-white dark:bg-gray-900 bg-scroll" style="background-image: url(./src/1_20230825_111452_0000.png) ">
     <section class="bg-transparent dark:bg-gray-900 " >
         <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12">
             
             <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white">Mass Mail Dispatcher</h1>
-            <p class="mb-8 text-lg font-normal text-center text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400">"Welcome to the Future of Communication! We empowers you to effortlessly connect with your audience on a grand scale. Experience the epitome of efficient communication today."</p>
+            <p   id="upload_file" class="mb-8 text-lg font-normal text-center text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400">"Welcome to the Future of Communication! We empowers you to effortlessly connect with your audience on a grand scale. Experience the epitome of efficient communication today."</p>
             <div class="flex flex-col mb-8 lg:mb-16 space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
                 
 
@@ -81,35 +86,31 @@
     type="file"
     id="csvFile"
     name="csvFile"
-    accept=".csv" />
+    accept=".csv"
+    onchange=" readCSVFile(this)" />
+    
                               </form>
                             <p class="text-s font-bold text-gray-500 dark:text-gray-400">or drag and drop</p>
                         </div>
-                        <input id="csvFile" type="file" name="csvFile" accept=".csv" class="hidden" />
+                        <input id="csvFile2" type="file" name="csvFile" accept=".csv"  class="hidden" />
                     </label>
                 </div> 
-                
-  
-            </div>
-            
-        </div>
-        
-    </section>
-   
-    <section>
-        
+                </div>
+             </div>
+         </section>
+    <section >
+
+  <!-- Columns that sorts valid and invalid mails -->
 <div class="grid grid-cols-2 md:grid-cols-2 gap-4 bg-transparent dark:bg-gray-900 dark:text-white">
     
-    <div style="height:200px;width:1/2px;overflow:auto;background-color:rgba(0, 0, 0,.05);color:rgb(97, 95, 95);scrollbar-base-color:gold">
+    <div style="height:200px;width:1/2px;overflow:auto;background-color:rgba(83, 143, 216, 0.05);color:rgb(131, 128, 128);scrollbar-base-color:gold">
         
 <nav class=" bg-transparent border-gray-200 dark:bg-gray-900 dark:border-gray-700 ">
     <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-1">
       <a href="#" class="flex items-center">
-          
-          <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white ">Valid Emails: <span id="validEmailCount"></span></span>
+          <span class="self-center text-xl font-semibold text-black whitespace-nowrap dark:text-white ">Valid Emails: <span id="validEmailCount"></span></span>
       </a>
-     
-    </div>
+      </div>
   </nav>
   <div class="tables">
     <div class="validEmails" id="validEmails">
@@ -122,16 +123,15 @@
         </table>
     </div>
   </div>
-  <!-- <div style="font-family:sans-serif;padding:10px;">This HTML scroll box has had color added. You can add color to the background of your scroll box. You can also add color to the scroll bars. You can also add color to the scroll bars. You can also add color to the scroll bars. You can also add color to the scroll bars. You can also add color to the scroll bars. You can also add color to the scroll bars. You can also add color to the scroll bars. You can also add color to the scroll bars. You can also add color to the scroll bars. You can also add color to the scroll bars. You can also add color to the scroll bars. You can also add color to the scroll bars. You can also add color to the scroll bars. You can also add color to the scroll bars. You can also add color to the scroll bars. You can also add color to the scroll bars. You can also add color to the scroll bars. You can also add color to the scroll bars.</div> -->
-    </div>
+</div>
 
-         <div style="height:200px;width:1/2px;overflow:auto;background-color:rgba(0, 0, 0,.05);color:rgb(97, 95, 95);scrollbar-base-color:gold">
+         <div style="height:200px;width:1/2px;overflow:auto;background-color:rgba(83, 143, 216, 0.05);color:rgb(131, 128, 128);scrollbar-base-color:gold">
         
 <nav class=" bg-transparent border-gray-200 dark:bg-gray-900 dark:border-gray-700 ">
     <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-1">
       <a href="#" class="flex items-center">
           
-          <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white ">Invalid Emails: <span id="validEmailCount"></span>
+          <span class="self-center text-xl text-black font-semibold whitespace-nowrap dark:text-white ">Invalid Emails: <span id="invalidEmailCount"></span>
       </a>
      
     </div>
@@ -146,116 +146,105 @@
             </tr>
         </table>
     </div>
-  </div>
-      
-    
+                   </div>
 </div>
-
-    </section>
+</section>
    
-
+   <!-- Scroll to top button -->
     <div id="progress">
         <span id="progress-value">&#x1F815;</span>
       </div>
 
-      
-<section class="bg-transparent dark:bg-gray-900 bg-scroll" >
+      <!-- The Mail Box -->
+<section id="mail" class="bg-transparent dark:bg-gray-900 bg-scroll" >
     <div class="">
   <div class="py-8 lg:py-20 px-4 mx-auto max-w-screen-md">
       <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">Write your mail here!</h2>
       <p class="mb-8 lg:mb-16 font-light text-center text-gray-500 dark:text-gray-400 sm:text-xl">"Compose, Connect, Convey: Your Words, Your Way!"</p>
       <div class="mailInfo">
-      <form method="post" class="space-y-8">
+      <form method="post" id="myForm" class="space-y-8">
           <div>
-              <label for="senderEmail" class=" block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Your email</label>
-              <input type="email" id="senderEmail" name="senderEmail" class="shadow-xl bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="name@flowbite.com" required>
+              <label for="senderEmail" class=" block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Your name</label>
+              <input type="email" id="senderEmail" name="senderEmail" class="shadow-xl bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="Name" required>
           </div>
           <div>
               <label for="subject" class="drop-shadow-2xl block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Subject</label>
-              <input type="text" id="subject" name="subject" class="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-xl focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="Let us know how we can help you" required>
+              <input type="text" id="subject" name="subject" class="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-xl focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="Subject" required>
           </div>
           <div class="sm:col-span-2">
-              <label for="message" class="drop-shadow-2xl block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Your message</label>
-              <textarea id="message" name="message" rows="6" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-xl border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Leave a comment..."></textarea>
+              <label for="message" class="drop-shadow-2xl block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Your mail</label>
+              <textarea id="message" name="message" rows="6" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-xl border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Write your mail here..."></textarea>
           </div>
-    <!-- <input type="button" value="Send Emails" style="font-weight: bold;" onclick="sendEmails()"> -->
-          <button type="button" value="Send Emails" id="submit" onclick="sendEmails()" class="py-3 px-5 text-sm font-medium text-center shadow-xl text-white rounded-lg bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 sm:w-fit hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">Send message</button>
-      </form>
+          <button type="button" value="Send Emails" id="submit" onclick="sendEmails()" class="py-3 px-5 text-sm font-medium text-center shadow-xl text-white rounded-lg bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 sm:w-fit hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">Send mail</button>
+          <button type="button" id="clearButton" class="py-3 px-5 text-sm font-medium text-center shadow-xl text-white rounded-lg bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 sm:w-fit hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">Clear mail</button>
+        </form>
     </div>
   </div>
 </div>
 </section>
 </section>
 
-
+<!-- Footer -->
 <footer class="bg-white shadow dark:bg-gray-800">
   <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
-      <div class="sm:flex sm:items-center sm:justify-between">
-          <a href="https://flowbite.com/" class="flex items-center mb-4 sm:mb-0">
-              <img src="https://flowbite.com/docs/images/logo.svg" class="h-8 mr-3" alt="Flowbite Logo" />
-              <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
+      <div class="sm:flex sm:items-center sm:justify-between md:px-10">
+          <a href="#" class="flex items-center mb-4 sm:mb-0">
+              
+              <span class="self-center text-blue-900 text-2xl font-serif font-bold whitespace-nowrap dark:text-white">Quick Mails</span>
           </a>
           <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
             <div>
-                <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Resources</h2>
-                <ul class="text-gray-500 dark:text-gray-400 font-medium">
-                    <li class="mb-4">
-                        <a href="https://flowbite.com/" class="hover:underline">Flowbite</a>
-                    </li>
-                    <li>
-                        <a href="https://tailwindcss.com/" class="hover:underline">Tailwind CSS</a>
-                    </li>
-                </ul>
+                <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Home</h2>
+                
             </div>
             <div>
-                <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Follow us</h2>
-                <ul class="text-gray-500 dark:text-gray-400 font-medium">
-                    <li class="mb-4">
-                        <a href="https://github.com/themesberg/flowbite" class="hover:underline ">Github</a>
-                    </li>
-                    <li>
-                        <a href="https://discord.gg/4eeurUVvTy" class="hover:underline">Discord</a>
-                    </li>
-                </ul>
+                <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Upload File</h2>
+                
             </div>
             <div>
-                <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Legal</h2>
-                <ul class="text-gray-500 dark:text-gray-400 font-medium">
-                    <li class="mb-4">
-                        <a href="#" class="hover:underline">Privacy Policy</a>
-                    </li>
-                    <li>
-                        <a href="#" class="hover:underline">Terms &amp; Conditions</a>
-                    </li>
-                </ul>
+                <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Write mail</h2>
+                
             </div>
         </div>
       </div>
       <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
-      <span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="https://flowbite.com/" class="hover:underline">Flowbite™</a>. All Rights Reserved.</span>
+      <div class="flex mt-4 space-x-5 sm:justify-center sm:mt-0">
+        <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
+            <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 8 19">
+                  <path fill-rule="evenodd" d="M6.135 3H8V0H6.135a4.147 4.147 0 0 0-4.142 4.142V6H0v3h2v9.938h3V9h2.021l.592-3H5V3.591A.6.6 0 0 1 5.592 3h.543Z" clip-rule="evenodd"/>
+              </svg>
+            <span class="sr-only">Facebook page</span>
+        </a>
+        <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
+            <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 21 16">
+                  <path d="M16.942 1.556a16.3 16.3 0 0 0-4.126-1.3 12.04 12.04 0 0 0-.529 1.1 15.175 15.175 0 0 0-4.573 0 11.585 11.585 0 0 0-.535-1.1 16.274 16.274 0 0 0-4.129 1.3A17.392 17.392 0 0 0 .182 13.218a15.785 15.785 0 0 0 4.963 2.521c.41-.564.773-1.16 1.084-1.785a10.63 10.63 0 0 1-1.706-.83c.143-.106.283-.217.418-.33a11.664 11.664 0 0 0 10.118 0c.137.113.277.224.418.33-.544.328-1.116.606-1.71.832a12.52 12.52 0 0 0 1.084 1.785 16.46 16.46 0 0 0 5.064-2.595 17.286 17.286 0 0 0-2.973-11.59ZM6.678 10.813a1.941 1.941 0 0 1-1.8-2.045 1.93 1.93 0 0 1 1.8-2.047 1.919 1.919 0 0 1 1.8 2.047 1.93 1.93 0 0 1-1.8 2.045Zm6.644 0a1.94 1.94 0 0 1-1.8-2.045 1.93 1.93 0 0 1 1.8-2.047 1.918 1.918 0 0 1 1.8 2.047 1.93 1.93 0 0 1-1.8 2.045Z"/>
+              </svg>
+            <span class="sr-only">Discord community</span>
+        </a>
+        <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
+            <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 17">
+              <path fill-rule="evenodd" d="M20 1.892a8.178 8.178 0 0 1-2.355.635 4.074 4.074 0 0 0 1.8-2.235 8.344 8.344 0 0 1-2.605.98A4.13 4.13 0 0 0 13.85 0a4.068 4.068 0 0 0-4.1 4.038 4 4 0 0 0 .105.919A11.705 11.705 0 0 1 1.4.734a4.006 4.006 0 0 0 1.268 5.392 4.165 4.165 0 0 1-1.859-.5v.05A4.057 4.057 0 0 0 4.1 9.635a4.19 4.19 0 0 1-1.856.07 4.108 4.108 0 0 0 3.831 2.807A8.36 8.36 0 0 1 0 14.184 11.732 11.732 0 0 0 6.291 16 11.502 11.502 0 0 0 17.964 4.5c0-.177 0-.35-.012-.523A8.143 8.143 0 0 0 20 1.892Z" clip-rule="evenodd"/>
+          </svg>
+            <span class="sr-only">Twitter page</span>
+        </a>
+        <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
+            <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 .333A9.911 9.911 0 0 0 6.866 19.65c.5.092.678-.215.678-.477 0-.237-.01-1.017-.014-1.845-2.757.6-3.338-1.169-3.338-1.169a2.627 2.627 0 0 0-1.1-1.451c-.9-.615.07-.6.07-.6a2.084 2.084 0 0 1 1.518 1.021 2.11 2.11 0 0 0 2.884.823c.044-.503.268-.973.63-1.325-2.2-.25-4.516-1.1-4.516-4.9A3.832 3.832 0 0 1 4.7 7.068a3.56 3.56 0 0 1 .095-2.623s.832-.266 2.726 1.016a9.409 9.409 0 0 1 4.962 0c1.89-1.282 2.717-1.016 2.717-1.016.366.83.402 1.768.1 2.623a3.827 3.827 0 0 1 1.02 2.659c0 3.807-2.319 4.644-4.525 4.889a2.366 2.366 0 0 1 .673 1.834c0 1.326-.012 2.394-.012 2.72 0 .263.18.572.681.475A9.911 9.911 0 0 0 10 .333Z" clip-rule="evenodd"/>
+            </svg>
+            <span class="sr-only">GitHub account</span>
+        </a>
+        <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
+            <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 0a10 10 0 1 0 10 10A10.009 10.009 0 0 0 10 0Zm6.613 4.614a8.523 8.523 0 0 1 1.93 5.32 20.094 20.094 0 0 0-5.949-.274c-.059-.149-.122-.292-.184-.441a23.879 23.879 0 0 0-.566-1.239 11.41 11.41 0 0 0 4.769-3.366ZM8 1.707a8.821 8.821 0 0 1 2-.238 8.5 8.5 0 0 1 5.664 2.152 9.608 9.608 0 0 1-4.476 3.087A45.758 45.758 0 0 0 8 1.707ZM1.642 8.262a8.57 8.57 0 0 1 4.73-5.981A53.998 53.998 0 0 1 9.54 7.222a32.078 32.078 0 0 1-7.9 1.04h.002Zm2.01 7.46a8.51 8.51 0 0 1-2.2-5.707v-.262a31.64 31.64 0 0 0 8.777-1.219c.243.477.477.964.692 1.449-.114.032-.227.067-.336.1a13.569 13.569 0 0 0-6.942 5.636l.009.003ZM10 18.556a8.508 8.508 0 0 1-5.243-1.8 11.717 11.717 0 0 1 6.7-5.332.509.509 0 0 1 .055-.02 35.65 35.65 0 0 1 1.819 6.476 8.476 8.476 0 0 1-3.331.676Zm4.772-1.462A37.232 37.232 0 0 0 13.113 11a12.513 12.513 0 0 1 5.321.364 8.56 8.56 0 0 1-3.66 5.73h-.002Z" clip-rule="evenodd"/>
+          </svg>
+            <span class="sr-only">Dribbble account</span>
+        </a>
+    </div>
   </div>
 </footer>
 
-
-
-<script src="../path/to/flowbite/dist/flowbite.bundle.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.js"></script>
 <script src="./index.js"></script>
-<script src="./tailwind.config.js"></script>
-<script src="./main.js"></script>
+
 </body>
-
-
-<script>
-    // It's best to inline this in `head` to avoid FOUC (flash of unstyled content) when changing pages or themes
-    if (
-      localStorage.getItem('color-theme') === 'dark' ||
-      (!('color-theme' in localStorage) &&
-        window.matchMedia('(prefers-color-scheme: dark)').matches)
-    ) {
-      document.documentElement.classList.add('dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-    }
-  </script>
 </html>
